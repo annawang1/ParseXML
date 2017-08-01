@@ -1,0 +1,37 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope" xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:TransactionManagerStatusData="http://optomany.com/axept/terminal/integration/transactionmanagerstatusdata" xmlns:PrintingEft="http://optomany.com/axept/terminal/integration/printing/eft" xmlns:Printing="http://optomany.com/axept/terminal/integration/printing" xmlns:ReportManagerStatusData="http://optomany.com/axept/terminal/integration/reportmanagerstatusdata" xmlns:Report="http://optomany.com/axept/terminal/integration/printing/report" xmlns:Report_Transaction="http://tempuri.org/Report_Transaction.xsd" xmlns:ReportManager="http://optomany.com/axept/terminal/integration/reportmanager" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:Publisher="http://tempuri.org/WSDualHttpBinding_IPublisher" xmlns:chan="http://schemas.microsoft.com/ws/2005/02/duplex" xmlns:wsa5="http://www.w3.org/2005/08/addressing" xmlns:netrm="http://schemas.microsoft.com/ws/2006/05/rm" xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm" xmlns:StandardIntegration="http://tempuri.org/WSHttpBinding_IStandardIntegrationService" xmlns:Integration="http://optomany.com/axept/terminal/integration">
+<SOAP-ENV:Header>
+<wsa5:To SOAP-ENV:mustUnderstand="true">http://192.168.1.231:8003/Axept/IntegrationService/d36033cb-d766-4751-951d-b78151dfe834</wsa5:To>
+<wsa5:Action SOAP-ENV:mustUnderstand="true">http://optomany.com/axept/terminal/integration/IPublisher/OnTransactionManagerChanged</wsa5:Action>
+<wsrm:Sequence>
+<wsrm:Identifier>urn:uuid:c875bed2-8560-46c7-9bbf-1978e926a56c</wsrm:Identifier>
+<wsrm:MessageNumber>208</wsrm:MessageNumber>
+</wsrm:Sequence>
+<wsrm:AckRequested>
+<wsrm:Identifier>urn:uuid:c875bed2-8560-46c7-9bbf-1978e926a56c</wsrm:Identifier>
+</wsrm:AckRequested>
+<wsrm:SequenceAcknowledgement>
+<wsrm:Identifier>urn:uuid:a340456e-5687-48da-9461-be1a5f00000000</wsrm:Identifier>
+<wsrm:AcknowledgementRange Upper="1" Lower="1"></wsrm:AcknowledgementRange>
+<netrm:BufferRemaining>8</netrm:BufferRemaining>
+</wsrm:SequenceAcknowledgement>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+<Integration:OnTransactionManagerChanged>
+<Integration:transactionManager>
+<Integration:Id>4ad7064c-ada5-468a-9dce-6cf6995932de</Integration:Id>
+<Integration:Status>
+<Integration:TransactionManagerStatus>1</Integration:TransactionManagerStatus>
+<Integration:ReasonCode>47</Integration:ReasonCode>
+<Integration:StatusData xsi:type="TransactionManagerStatusData:CardIdentified">
+<TransactionManagerStatusData:StarredPrimaryAccountNumber>***********4360</TransactionManagerStatusData:StarredPrimaryAccountNumber>
+<TransactionManagerStatusData:CardSchemeId>1</TransactionManagerStatusData:CardSchemeId>
+<TransactionManagerStatusData:CardSchemeName>Amex</TransactionManagerStatusData:CardSchemeName>
+<TransactionManagerStatusData:MerchantTokenId>6lhgivap5jqAiHPwelqMGWxFEiWsJMlNyFnMColfrWofMQ==</TransactionManagerStatusData:MerchantTokenId>
+<TransactionManagerStatusData:AlternateStarredPrimaryAccountNumber xsi:nil="true"></TransactionManagerStatusData:AlternateStarredPrimaryAccountNumber>
+<TransactionManagerStatusData:CardholderName xsi:nil="true"></TransactionManagerStatusData:CardholderName>
+</Integration:StatusData>
+</Integration:Status>
+</Integration:transactionManager>
+</Integration:OnTransactionManagerChanged>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
